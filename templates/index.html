@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataFrame Display</title>
+</head>
+<body>
+</div>
+<form action="/select_row" method="post">
+    <label for="row_index">Select a row data:</label>
+    <input type="number" id="row_index" name="row_index" min="0" max="{{ table|length-2 }}">
+    <input type="submit" value="Select">
+</form>
+<h1>DataFrame Display</h1>
+    <div>
+        <h2>DataFrame:</h2>
+        {{ table | safe }}
+    </div>
+{% if selected_df  %}
+    <div>
+        <h2>Selected Row:</h2>
+        {{ selected_df | safe }}
+            <h2>Graph plotting and the cluster of data selected </h2>
+            <img src="{{ selected_image }}" alt="Selected Image">
+    </div>
+    {% endif %}
+    <a href="/task2"><button>Task 2</button></a>
+</body>
+</html>
+

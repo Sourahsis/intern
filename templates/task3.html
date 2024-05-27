@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .table-container {
+            width: 80%;
+            margin: 20px 0;
+        }
+        .result-section {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .result-section .table {
+            width: 45%;
+        }
+        .result-section .details {
+            width: 45%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 3</h1>
+    <div class="container">
+        <div class="table-container">
+            <h2>Main DataFrame(1st few data)</h2>
+            {{ main_table | safe }}
+        </div>
+        <div class="result-section">
+            <div class="table">
+                <h2>Datewise total duration</h2>
+                {{ result_table1 | safe }}
+            </div>
+        </div>
+        <div class="result-section">
+            <div class="table">
+                <h2>Datewise number of picking and placing activity done</h2>
+                {{ result_table2 | safe }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

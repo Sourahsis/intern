@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .dataset {
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .details {
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .dataset h2, .details h2 {
+            text-decoration: underline;
+        }
+        .task3-btn {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 2</h1>
+    <div class="task3-btn">
+        <a href="/task3"><button>Go to Task 3</button></a>
+    </div>
+    <div class="container">
+        <div class="dataset">
+            <h2>Dicition Tree</h2>
+            {{ table1 | safe }}
+        </div>
+        <div class="details">
+            <h2>Why used it</h2>
+            <p>To see how a decision tree predicts a response, follow the decisions in the tree from the root (beginning) node down to a leaf node which contains the response. Classification trees give responses that are nominal, such as true or false. Regression trees give numeric responses.
+
+                Decision trees are relatively easy to follow; you can see a full representation of the path taken from root to leaf. This is especially useful if you need to share the results with people interested in how a conclusion was reached. They are also relatively quick.</p>
+        </div>
+        <div class="dataset">
+            <h2>logistic Regression</h2>
+            {{ table2 | safe }}
+        </div>
+        <div class="details">
+            <h2>Why used it</h2>
+            <p>Even though the word “regression” is in the name, logistic regression is used for binary classification problems (those where the data has only two classes). Logistic regression is known as a simpler classification technique and is often used as a starting point to establish a baseline before moving to more complex model types.
+
+                Logistic regression uses a linear combination of the predictor variables to estimate the probability of the outcome being 0 or 1. This is why the word “regression” is in the name. Because the probability is calculated as a linear combination of the predictor variables, logistic regression models are relatively straightforward to interpret.</p>
+        </div>
+        <div class="dataset">
+            <h2>naive bias</h2>
+            {{ table3 | safe }}
+        </div>
+        <div class="details">
+            <h2>Why used it</h2>
+            <p>If the data is not complex and your task is relatively simple, try a naive Bayes algorithm. It’s a high-bias/low-variance classifier, which has advantages over logistic regression and nearest neighbor algorithms when working with a limited amount of data available to train a model.
+
+                Naive Bayes is also a good choice when CPU and memory resources are a limiting factor. Because naive Bayes is very simple, it doesn’t tend to overfit data and can be trained very quickly. It also does well with continuous new data used to update the classifier.
+                
+                If the data grows in size and variance and you need a more complex model, other classifiers will probably work better. Also, its simple analysis is not a good basis for complex hypotheses.</p>
+        </div>
+    </div>
+</body>
+</html>
