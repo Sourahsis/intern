@@ -1,0 +1,6 @@
+Flask
+pandas
+os-sys
+matplotlib
+scikit-learn
+joblib
